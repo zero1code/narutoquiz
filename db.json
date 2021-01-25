@@ -1,5 +1,5 @@
 {
-  "bg": "https://images5.alphacoders.com/413/413842.jpg",
+  "bg": "https://images5.alphacoders.com/532/532559.jpg",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
     {
@@ -30,8 +30,8 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#0d47a1",
-      "secondary": "#29b6f6",
+      "primary": "#c66a00",
+      "secondary": "#c66a001a",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",

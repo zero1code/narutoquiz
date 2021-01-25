@@ -44,10 +44,10 @@ export default function Home() {
       <QuizContainer>
         <Widget>
           <Widget.Header>
-              <h1>Titulo do quiz</h1>
+              <h1>Naruto Shippuden</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>Vamos ver se você sabe tudo da história do ninja mais atrapalhado e dedicado do mundo!</p>
           </Widget.Content>
         </Widget>
 
@@ -60,7 +60,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="github.com/zero1code"/>
+      <GitHubCorner projectUrl="https://github.com/zero1code/narutoquiz"/>
     </QuizBackground>
   );
 }
