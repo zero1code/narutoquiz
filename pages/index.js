@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Head from 'next/head';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
@@ -18,7 +19,28 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgrounImage={db.bg}>
+    <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Quiz Naruto Shippuden</title>
+        <meta name="title" content="Quiz Naruto Shippuden" />
+        <meta name="description" content="Vamos ver se você sabe tudo da história do ninja mais atrapalhado e dedicado do mundo!"/>
+      </Head>
+      <Head>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://narutoquiz.zero1code.vercel.app/"/>
+        <meta property="og:title" content="Quiz Naruto Shippuden"/>
+        <meta property="og:description" content="Vamos ver se você sabe tudo da história do ninja mais atrapalhado e dedicado do mundo!"/>
+        <meta property="og:image" content={db.bg}/>
+      </Head>
+      <Head>
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://narutoquiz.zero1code.vercel.app/"/>
+        <meta property="twitter:title" content="Quiz Naruto Shippuden"/>
+        <meta property="twitter:description" content="Vamos ver se você sabe tudo da história do ninja mais atrapalhado e dedicado do mundo!"/>
+        <meta property="twitter:image" content={db.bg}/>
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
