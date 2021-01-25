@@ -7,13 +7,19 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 
 export const QuizContainer = styled.div`
+  background: linear-gradient(197deg, #ffffff1a, #ffffff00);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
   width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
+  max-width: 370px;
+  padding: 10px;
+  margin: 30px 10%;
   @media screen and (max-width: 500px) {
     margin: auto;
-    padding: 15px
+    padding: 10px
   }
 `;
 

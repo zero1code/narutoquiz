@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #0000004d;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
   border-radius: 4px;
   overflow: hidden;
 
@@ -28,7 +28,7 @@ Widget.Header = styled.header`
 `;
 
 Widget.Content = styled.div`
-  background-color: ${({theme}) => theme.colors.secondary};
+  /* background-color: ${({theme}) => `${theme.colors.secondary}`}; */
   padding: 24px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
