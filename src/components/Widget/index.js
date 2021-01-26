@@ -9,7 +9,7 @@ const Widget = styled.div`
   overflow: hidden;
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
   }
@@ -28,7 +28,6 @@ Widget.Header = styled.header`
 `;
 
 Widget.Content = styled.div`
-  /* background-color: ${({theme}) => `${theme.colors.secondary}`}; */
   padding: 24px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
@@ -40,6 +39,38 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+
+  input {
+   width: 100%;   
+   height: 40px;
+   padding: 5px;
+   border-radius: 4px;
+   border: 2px solid ${({theme}) => theme.colors.primary};
+   outline: none;
+   font-size: 16px;
+   font-weight: 700;
+  }
+
+  button {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background-color: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.contrastText};
+    font-size: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+      background-color: ${({emptyInput, theme}) => emptyInput !== 0 ? theme.colors.success : theme.colors.secondary};
+    }
 `;
 
 export default Widget;

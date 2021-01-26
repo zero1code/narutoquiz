@@ -1,5 +1,15 @@
-// src/components/QuizBackground/index.js
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const appearFromOpacity = keyframes`
+  from {
+    opacity: 0.5;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+`;
 
 const QuizBackground = styled.div`
   width: 100%;
@@ -31,6 +41,7 @@ const QuizBackground = styled.div`
       z-index: 10;
     }
   }
+  animation: ${appearFromOpacity} 2s;
 `;
 
 export default QuizBackground;
