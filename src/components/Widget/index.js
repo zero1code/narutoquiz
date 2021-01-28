@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -39,38 +39,50 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
-
-  input {
-   width: 100%;   
-   height: 40px;
-   padding: 5px;
-   border-radius: 4px;
-   border: 2px solid ${({theme}) => theme.colors.primary};
-   outline: none;
-   font-size: 16px;
-   font-weight: 700;
-  }
-
-  button {
-    margin-top: 16px;
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    background-color: ${({theme}) => theme.colors.primary};
-    color: ${({theme}) => theme.colors.contrastText};
-    font-size: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s;
-  }
-
-  button:hover {
-      background-color: ${({emptyInput, theme}) => emptyInput !== 0 ? theme.colors.success : theme.colors.secondary};
-    }
 `;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme, checked }) => checked === true ? theme.colors.checkedAlternative : theme.colors.secondary};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
+`;
+
+const spin = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+Widget.Spin = styled.div`
+  width: 7rem;
+  height: 7rem;
+  margin-top: 1rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #FFF;
+  animation: 2s ${spin} infinite ease-in-out; 
+`;
+
+Widget.Loading = styled.div`
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 
 export default Widget;
