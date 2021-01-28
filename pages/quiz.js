@@ -44,7 +44,7 @@ function ResultWidget({results}) {
         <ul>
           {results.map((result, index) => (
             <li>
-              #0{index+1} Resultado: 
+              #{index+1} Resultado:{' '}
               {
                 result === true 
                   ? 'Acertou' 
